@@ -4,11 +4,17 @@ import { createContainer } from 'meteor/react-meteor-data';
 
 //import { Lists } from '../../api/lists/lists.js';
 
-const AppLayout = () => (
-  <div>
-    <h1>This is the main layout!</h1>
-  </div>
-);
+class AppLayout extends Component {
+
+  render() {
+    return (
+      <div className="container">
+        <h1>This is the main layout!</h1>
+        {this.props.children}
+      </div>
+    );
+  }
+}
 
 AppLayout.propTypes = {
 
